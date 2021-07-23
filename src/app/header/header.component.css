@@ -1,0 +1,13 @@
+.search {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.75em;
+}
+.search input {
+  width: 100%;
+  padding: 0.25em 0.75em;
+  opacity: 0.95;
+  border-radius: 6px;
+  border: none;
+}
