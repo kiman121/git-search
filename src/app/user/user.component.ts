@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchRequestService } from '../search-http/search-request.service';
+import { User } from '../user-class/user';
 
 @Component({
   selector: 'app-user',
@@ -7,11 +8,12 @@ import { SearchRequestService } from '../search-http/search-request.service';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  user: any[] = [];
+  user!: User;
   constructor(private searchService: SearchRequestService) {}
 
   ngOnInit(): void {
     this.searchService.searchRequest();
-    this.user = this.searchService.search;
+    this.user = this.searchService.user;
+    console.log(this.user);
   }
 }
