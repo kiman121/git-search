@@ -1,0 +1,26 @@
+.repo-detail{
+    border-bottom: 1px solid;
+    margin: 0 0.75em;
+}
+.repo-footer ul {
+  list-style-type: none;
+  padding: 0 ;
+}
+.repo-footer ul li {
+  display: inline-block;
+  border: none;
+  width: fit-content;
+  padding: 0.25em 1em;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 0.75em;
+}
+.repo-footer .stars{
+    background-color: #cd113b;
+    opacity: 0.75;
+}
+.repo-footer .forks{
+    background-color: #52006a;
+    opacity: 0.75;
+    margin-left: 0.25em;
+}

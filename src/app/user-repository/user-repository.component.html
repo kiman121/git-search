@@ -1,15 +1,15 @@
-<div *ngFor="let repository of repositories">
-    <div class="repo-header">
-        <a href="">{{repository.name}}</a>
-        <p>Created on: {{repository.createdAt}}</p>
-    </div>
-    <div class="repo-content">
-        <p>{{repository.description}}</p>
-    </div>
-    <div class="repo-footer">
-        <ul>
-            <li>{{repository.stars}} Stars</li>
-            <li>{{repository.forks}} Forks</li>
-        </ul>
-    </div>
+<div *ngFor="let repository of repositories" class="repo-detail">
+  <div class="repo-header">
+    <a href="">{{ repository.name }}</a>
+    <p class="muted-text">Created on: {{ repository.createdAt }}</p>
+  </div>
+  <div class="repo-content">
+    <p>{{ repository.description }}</p>
+  </div>
+  <div class="repo-footer">
+    <ul>
+      <li class="stars">{{ repository.stars }} Stars</li>
+      <li class="forks">{{ repository.forks }} Forks</li>
+    </ul>
+  </div>
 </div>
