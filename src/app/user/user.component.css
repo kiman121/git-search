@@ -14,11 +14,11 @@
   width: 25%;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
-.header-section .location {
+/* .header-section .location {
   border-left: 2px solid #000;
   padding-left: 0.125em;
-  opacity: 0.6;
-}
+  font-size: 0.75em;
+} */
 .header-section h5 {
   padding-top: 0.75em;
 }
@@ -43,6 +43,26 @@
 }
 .header-section .following {
   background-color: #cd113b;
+}
+.user-bio{
+    border-top: 2px solid ;
+    padding: 0;
+    padding-top: 0.25em;
+}
+.bio-header{
+    background-color: #A2DBFA;
+    padding: 0.5em 0 0.02em 0.5em;
+}
+.bio-content{
+    padding: 0 0.25em;
+}
+.divider{
+    border-left: 2px solid #000;
+    margin: 0 0.25em;
+}
+.muted-text {
+    color: #6c757d !important;
+    font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   .content-wrapper {
