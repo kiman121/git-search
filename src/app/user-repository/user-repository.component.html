@@ -1,4 +1,15 @@
 <div *ngFor="let repository of repositories">
-    <p>{{repository.name}}</p>
+    <div class="repo-header">
+        <a href="">{{repository.name}}</a>
+        <p>Created on: {{repository.createdAt}}</p>
+    </div>
+    <div class="repo-content">
+        <p>{{repository.description}}</p>
+    </div>
+    <div class="repo-footer">
+        <ul>
+            <li>{{repository.stars}} Stars</li>
+            <li>{{repository.forks}} Forks</li>
+        </ul>
+    </div>
 </div>
-<p>Its work in progress</p>

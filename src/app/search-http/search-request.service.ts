@@ -10,11 +10,10 @@ import { Repository } from '../repository-class/repository';
 export class SearchRequestService {
   user: User;
   repositories: Repository[] = [];
-  repository: Repository;
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', 0, 0, 0, '');
-    this.repository = new Repository('', '', '', 0);
+    // this.repository = new Repository('', '', '', 0);
   }
 
   getRepositories() {
@@ -35,11 +34,16 @@ export class SearchRequestService {
         .then(
           (response) => {
             Object.values(response).forEach((element) => {
-              this.repositories.push(new Repository(element.name, element.description, element.created_at, element.forks) )
+              this.repositories.push(
+                new Repository(
+                  element.name,
+                  element.description,
+                  element.created_at,
+                  element.forks,
+                  element.watchers
+                )
+              );
             });
-            // Object.keys(response).forEach((key:any) => {
-            //   this.repositories.push(Object.values(response)[key]);
-            // });
             resolve('done');
           },
           (error) => {

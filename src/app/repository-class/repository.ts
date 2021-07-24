@@ -3,6 +3,7 @@ export class Repository {
     public name: string,
     public description: string,
     public createdAt: string,
-    public forks: number
+    public forks: number,
+    public stars: number
   ) {}
 }
