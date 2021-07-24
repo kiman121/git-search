@@ -22,6 +22,25 @@
 .header-section h5 {
   padding-top: 0.75em;
 }
+.header-section ul{
+    list-style-type: none;
+}
 .header-section ul li{
     display: inline-block;
+    border: 1px solid;
+    width: fit-content;
+    padding: 0.25em 1em;
+    margin: 0.25em;
+    border-radius: 2px;
+    color: #fff;
+    font-size: .75em;
+}
+.header-section .repos{
+    background-color: #52006A;
+}
+.header-section .followers{
+    background-color: #FF7600;
+}
+.header-section .following{
+    background-color: #CD113B;
 }
