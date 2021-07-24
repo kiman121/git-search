@@ -14,6 +14,5 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.searchService.searchRequest();
     this.user = this.searchService.user;
-    console.log(this.user);
   }
 }

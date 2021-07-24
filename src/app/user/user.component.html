@@ -1,1 +1,11 @@
-<p>user works!</p>
+<div class="container-fluid content-wrapper">
+  <div class="header-section">
+    <img [src]="user.avatarUrl" alt="Profile photo" />
+    <h5>{{ user.username }} <span class="location">{{ user.location }}</span></h5>
+    <ul>
+        <li>{{user.publicRepos}} Public Repos</li>
+        <li>{{user.followers}} Followers</li>
+        <li>{{user.following}} Following</li>
+    </ul>
+  </div>
+</div>
