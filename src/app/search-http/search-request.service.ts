@@ -23,6 +23,7 @@ export class SearchRequestService {
       following: number;
       created_at: string;
     }
+    // https://api.github.com/users/kiman121/repos?access_token=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
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
