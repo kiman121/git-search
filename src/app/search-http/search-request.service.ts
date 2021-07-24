@@ -2,14 +2,55 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { User } from '../user-class/user';
+import { Repository } from '../repository-class/repository';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SearchRequestService {
   user: User;
+  repositories: Repository[] = [];
+  repository: Repository;
+
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', 0, 0, 0, '');
+    this.repository = new Repository('', '', '', 0);
+  }
+
+  getRepositories() {
+    interface ApiResponse {
+      name: string;
+      description: string;
+      created_at: string;
+      forks: number;
+    }
+
+    let promise = new Promise((resolve, reject) => {
+      this.http
+        .get<ApiResponse>(
+          'https://api.github.com/users/kiman121/repos?access_token=' +
+            environment.accessToken
+        )
+        .toPromise()
+        .then(
+          (response) => {
+            Object.values(response).forEach((element) => {
+              this.repositories.push(new Repository(element.name, element.description, element.created_at, element.forks) )
+            });
+            // Object.keys(response).forEach((key:any) => {
+            //   this.repositories.push(Object.values(response)[key]);
+            // });
+            resolve('done');
+          },
+          (error) => {
+            // this.gif.data = [];
+
+            reject(error);
+          }
+        );
+    });
+
+    return promise;
   }
 
   searchRequest() {
