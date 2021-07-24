@@ -12,7 +12,7 @@ export class UserComponent implements OnInit {
   constructor(private searchService: SearchRequestService) {}
 
   ngOnInit(): void {
-    this.searchService.searchRequest();
+    this.searchService.getRepositoryUser();
     this.user = this.searchService.user;
   }
 }

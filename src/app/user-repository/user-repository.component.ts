@@ -8,11 +8,15 @@ import { SearchRequestService } from '../search-http/search-request.service';
   styleUrls: ['./user-repository.component.css'],
 })
 export class UserRepositoryComponent implements OnInit {
-  repositories: Repository[] = [];
-  constructor(private searchService: SearchRequestService) {}
+  repositories: Repository[];
+  constructor(private searchService: SearchRequestService) {
+    
+  }
 
   ngOnInit(): void {
+    // this.repositories = []
     this.searchService.getRepositories();
     this.repositories = this.searchService.repositories;
+    // console.log(this.repositories);
   }
 }

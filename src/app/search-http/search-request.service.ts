@@ -10,10 +10,22 @@ import { Repository } from '../repository-class/repository';
 export class SearchRequestService {
   user: User;
   repositories: Repository[] = [];
+  repoUsername: string = '';
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', 0, 0, 0, '');
-    // this.repository = new Repository('', '', '', 0);
+    this.setUsername();
+    this.repositories = [];
+  }
+
+  setUsername(username: string = '') {
+    this.repositories.splice(0, this.repositories.length);
+
+    if (username == '') {
+      this.repoUsername = 'kiman121';
+    } else {
+      this.repoUsername = username;
+    }
   }
 
   getRepositories() {
@@ -27,8 +39,7 @@ export class SearchRequestService {
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          'https://api.github.com/users/kiman121/repos?access_token=' +
-            environment.accessToken
+          `https://api.github.com/users/${this.repoUsername}/repos?access_token=${environment.accessToken}`
         )
         .toPromise()
         .then(
@@ -44,6 +55,7 @@ export class SearchRequestService {
                 )
               );
             });
+
             resolve('done');
           },
           (error) => {
@@ -57,7 +69,7 @@ export class SearchRequestService {
     return promise;
   }
 
-  searchRequest() {
+  getRepositoryUser() {
     interface ApiResponse {
       login: string;
       avatar_url: string;
@@ -68,12 +80,11 @@ export class SearchRequestService {
       following: number;
       created_at: string;
     }
-    // https://api.github.com/users/kiman121/repos?access_token=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
+
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          'https://api.github.com/users/kiman121?access_token=' +
-            environment.accessToken
+          `https://api.github.com/users/${this.repoUsername}?access_token=${environment.accessToken}`
         )
         .toPromise()
         .then(

@@ -1,7 +1,12 @@
 <nav class="bg-dark">
   <div class="search">
-    <form>
-      <input type="text" placeholder="Search or jump to..." />
+    <form #searchForm="ngForm" (ngSubmit)="submitSearch(searchForm)">
+      <input
+        type="text"
+        placeholder="Search or jump to..."
+        name="searchName"
+        ngModel
+      />
     </form>
   </div>
 </nav>
