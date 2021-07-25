@@ -16,7 +16,7 @@
     <div class="bio-header">
       <h6>
         <span class="bio">Bio</span><span class="divider"> Member since:</span
-        ><span class="muted-text">{{ user.createdAt }}</span>
+        ><span class="muted-text">{{ user.createdAt | dateExtractor}}</span>
       </h6>
     </div>
     <div class="bio-content">

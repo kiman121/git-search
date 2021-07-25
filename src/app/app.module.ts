@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { UserRepositoryComponent } from './user-repository/user-repository.component';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DateExtractorPipe } from './date-extractor.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     UserComponent,
     UserRepositoryComponent,
     PageNotFoundComponent,
+    DateExtractorPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -1,7 +1,13 @@
 <div *ngFor="let repository of repositories" class="repo-detail">
   <div class="repo-header">
-    <h5><a href="{{repository.repositoryLink}}" target="_blank">{{ repository.name }}</a></h5>
-    <p class="muted-text">Created on: {{ repository.createdAt }}</p>
+    <h5>
+      <a href="{{ repository.repositoryLink }}" target="_blank">{{
+        repository.name
+      }}</a>
+    </h5>
+    <p class="muted-text">
+      Created on: {{ repository.createdAt | dateExtractor }}
+    </p>
   </div>
   <div class="repo-content">
     <p>{{ repository.description }}</p>
