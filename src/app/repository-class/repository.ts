@@ -4,6 +4,7 @@ export class Repository {
     public description: string,
     public createdAt: string,
     public forks: number,
-    public stars: number
+    public stars: number,
+    public repositoryLink: string
   ) {}
 }

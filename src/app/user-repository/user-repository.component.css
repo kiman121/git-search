@@ -1,6 +1,7 @@
 .repo-detail{
     border-bottom: 1px solid;
     margin: 0 0.75em;
+    margin-bottom: 0.75em;
 }
 .repo-footer ul {
   list-style-type: none;

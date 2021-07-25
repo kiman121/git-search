@@ -51,7 +51,8 @@ export class SearchRequestService {
                   element.description,
                   element.created_at,
                   element.forks,
-                  element.watchers
+                  element.watchers,
+                  element.html_url
                 )
               );
             });
