@@ -1,12 +1,27 @@
 <nav class="bg-dark">
   <div class="search">
     <form #searchForm="ngForm" (ngSubmit)="submitSearch(searchForm)">
-      <input
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search or jump to..."
+          name="searchName"
+          ngModel
+        />
+        <div class="input-group-append">
+          <button class="btn" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+      </div>
+      <!-- <input
         type="text"
         placeholder="Search or jump to..."
         name="searchName"
         ngModel
       />
+      <button class="btn"><i class="material-icons">search</i> </button> -->
     </form>
   </div>
 </nav>
