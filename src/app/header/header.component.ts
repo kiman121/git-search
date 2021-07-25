@@ -11,11 +11,14 @@ export class HeaderComponent implements OnInit {
   searchName: string;
   constructor(private searchService: SearchRequestService) {}
 
-  submitSearch(searchValue: NgForm) {
-    this.searchService.setUsername(searchValue.value.searchName);
+  submitSearch(form: NgForm) {
+    this.searchService.setUsername(form.value.searchName);
     this.searchService.getRepositories();
     this.searchService.getRepositoryUser();
-    
+    this.resetFields(form)
+  }
+  resetFields(form){
+    form.reset();
   }
   ngOnInit(): void {}
 }
