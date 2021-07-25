@@ -10,7 +10,8 @@
     </p>
   </div>
   <div class="repo-content">
-    <p>{{ repository.description }}</p>
+    <div *ngIf="repository.description; else elesBlock"><p>{{ repository.description }}</p></div>
+    <ng-template #elesBlock><div appWithoutDescription class="missing-repo"></div></ng-template>
   </div>
   <div class="repo-footer">
     <ul>

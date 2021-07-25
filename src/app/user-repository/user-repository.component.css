@@ -25,3 +25,10 @@
     opacity: 0.75;
     margin-left: 0.25em;
 }
+.missing-repo{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  margin-bottom: .25em;
+  padding: .25em;
+}

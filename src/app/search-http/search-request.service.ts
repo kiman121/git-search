@@ -60,7 +60,7 @@ export class SearchRequestService {
             resolve('done');
           },
           (error) => {
-            // this.gif.data = [];
+            this.repositories = [];
 
             reject(error);
           }

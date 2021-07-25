@@ -10,6 +10,7 @@ import { UserRepositoryComponent } from './user-repository/user-repository.compo
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DateExtractorPipe } from './date-extractor.pipe';
+import { WithoutDescriptionDirective } from './without-description.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DateExtractorPipe } from './date-extractor.pipe';
     UserRepositoryComponent,
     PageNotFoundComponent,
     DateExtractorPipe,
+    WithoutDescriptionDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
