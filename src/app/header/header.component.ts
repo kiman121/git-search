@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
     this.searchService.setUsername(searchValue.value.searchName);
     this.searchService.getRepositories();
     this.searchService.getRepositoryUser();
+    
   }
   ngOnInit(): void {}
 }
