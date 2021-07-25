@@ -1,27 +1,45 @@
-# GitSearch
+# GitHub Search Web Application
+#### A Github Search app where interested users can search for their GitHub details.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+#### By **Patrick Mwangangi**
+## Description
+This a nifty web application created to serve as a platform where interested users are able to search for their's or other user's GitHub information. A brief user bio and repository details are displayed for the user. Should a user be interested to view the actual repository, a link is available to help in smooth navigation.
 
-## Development server
+Further to the above usage, this master piece was created as practice on concepts learnt in Angular (at Moringa School).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+It was created using [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1 and GitHub Api.
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Here is a working live demo:
+https://kiman121.github.io/git-search/
 
-## Build
+## Setup/Installaction Requirements
+- Clone the repository (repo).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+git clone https://github.com/kiman121/git-search.git
+```
 
-## Running unit tests
+- Open the project on VS Code or any editor of choice.
+- Open the project on live server (ng serve -o).
+## Known Bugs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No Known bugs
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- Angular
+- Typescript
+## Support and contact details
 
-## Further help
+If you want to contact us, email us on info@git-search.com
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### License
+
+[MIT licence](https://choosealicense.com/licenses/mit/)
+Copyright (c) 2021 **GitSearch inc**
