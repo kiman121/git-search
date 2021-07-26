@@ -39,7 +39,8 @@ export class SearchRequestService {
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          `https://api.github.com/users/${this.repoUsername}/repos?access_token=${environment.accessToken}`
+          // `https://api.github.com/users/${this.repoUsername}/repos?access_token=${environment.accessToken}`
+          `https://api.github.com/users/${this.repoUsername}/repos`
         )
         .toPromise()
         .then(
@@ -85,7 +86,8 @@ export class SearchRequestService {
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          `https://api.github.com/users/${this.repoUsername}?access_token=${environment.accessToken}`
+          `https://api.github.com/users/${this.repoUsername}`
+          // `https://api.github.com/users/${this.repoUsername}?access_token=${environment.accessToken}`
         )
         .toPromise()
         .then(
